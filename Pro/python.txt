@@ -1,0 +1,12 @@
+import smtplib
+import sys
+content = sys.argv[1]
+sender =  'pansuriyajaydip21@gmail.com'
+ricever = 'jaydippansuriya937@gmail.com'
+password = 'jaydip21'
+mail = smtplib.SMTP('smtp.gmail.com',587)
+mail.ehlo()
+mail.starttls()
+mail.login(sender,password)
+mail.sendmail(sender,ricever,content)
+mail.close()
